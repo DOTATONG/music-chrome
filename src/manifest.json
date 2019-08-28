@@ -1,0 +1,29 @@
+{
+	"browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "index.html"
+   },
+	"homepage_url": "https://dotatong.cn",
+	"description": "网易云音乐歌单歌曲下载工具",
+	"icons": { "200": "icon.png" },
+	"manifest_version": 2,
+	"name": "网易云音乐下载助手",
+	"version": "1.0",
+	"content_scripts": [
+      {
+         "matches": ["https://music.163.com/*"],
+         "js": ["script.js"],
+         "css": ["style.css"]
+      }
+	],
+   "permissions":[
+      "contextMenus", // 右键菜单
+      "tabs", // 标签
+      // "notifications", // 通知
+      "webRequest", // web请求
+      "webRequestBlocking",
+      "storage", // 插件本地存储
+      "http://*/*", // 可以通过executeScript或者insertCSS访问的网站
+      "https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+   ]
+}
