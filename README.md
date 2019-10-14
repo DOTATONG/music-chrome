@@ -3,4 +3,4 @@
 
 需配合Erlang端使用
 
-http://git.dotatong.cn/dotatong/music-opt
+https://github.com/dotatong/music-opt
